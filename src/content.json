@@ -1,0 +1,427 @@
+{
+  "site": {
+    "url": "https://codebyjuliamendes.github.io",
+    "name": "Júlia Mendes",
+    "github": "https://github.com/codebyjuliamendes",
+    "linkedin": "https://www.linkedin.com/in/codebyjuliamendes"
+  },
+  "i18n": {
+    "pt": {
+      "lang": "pt-BR",
+      "path": "/",
+      "title": "Júlia Mendes — Desenvolvedora Full Stack",
+      "description": "Portfólio de Júlia Mendes, desenvolvedora full stack. Produtos web completos em TypeScript, Python, Go, Rust, Java e Kotlin, com testes, segurança e infraestrutura de produção.",
+      "nav": {
+        "projects": "Projetos",
+        "approach": "Como trabalho",
+        "stack": "Stack",
+        "contact": "Contato",
+        "switch": "English",
+        "skip": "Pular para o conteúdo",
+        "theme": "Alternar tema"
+      },
+      "hero": {
+        "eyebrow": "Desenvolvedora Full Stack",
+        "title": "Construo produtos web completos, do banco de dados à interface.",
+        "lead": "Gosto de transformar problemas reais em software confiável: regras de negócio bem testadas, APIs seguras, interfaces acessíveis e tudo pronto para rodar em produção.",
+        "ctaProjects": "Ver projetos",
+        "ctaContact": "Falar comigo",
+        "facts": ["11 projetos open source", "7 linguagens", "Testes, CI e Docker em todos"]
+      },
+      "projects": {
+        "title": "Projetos",
+        "lead": "Cada projeto resolve um problema concreto e tem testes, CI, Docker e documentação. A stack foi escolhida pelo que o problema pede.",
+        "featured": "Destaques",
+        "more": "Mais projetos",
+        "filterAll": "Todos",
+        "problem": "Problema",
+        "highlights": "Destaques técnicos",
+        "repo": "Código",
+        "shotAlt": "Captura de tela do {name}"
+      },
+      "approach": {
+        "title": "Como trabalho",
+        "items": [
+          {
+            "title": "Regras de negócio primeiro",
+            "text": "Separo o domínio em código puro e testável. Dinheiro em centavos, datas com fuso explícito, máquinas de estado declaradas."
+          },
+          {
+            "title": "Segurança por padrão",
+            "text": "CSP estrita, validação de entrada, rate limit, proteção contra XSS e CSV injection, segredos fora do código."
+          },
+          {
+            "title": "Pronto para produção",
+            "text": "Docker com usuário não-root e healthcheck, migrações versionadas, logs estruturados, shutdown gracioso."
+          },
+          {
+            "title": "Qualidade automatizada",
+            "text": "Testes de domínio, de API e de banco rodando no CI, além de lint, tipos e smoke test do container a cada PR."
+          }
+        ]
+      },
+      "stack": {
+        "title": "Stack",
+        "groups": [
+          { "name": "Linguagens", "items": ["TypeScript", "JavaScript", "Python", "Go", "Rust", "Java", "Kotlin"] },
+          { "name": "Backend", "items": ["Node.js", "Express", "Fastify", "FastAPI", "Spring Boot", "axum", "chi"] },
+          { "name": "Dados", "items": ["PostgreSQL", "SQLite", "SQLAlchemy", "Flyway", "Alembic", "FTS5"] },
+          { "name": "Frontend", "items": ["HTML semântico", "CSS moderno", "Acessibilidade", "PWA", "Modo escuro"] },
+          { "name": "Infra e qualidade", "items": ["Docker", "GitHub Actions", "Testes automatizados", "ESLint", "Ruff", "Clippy"] }
+        ]
+      },
+      "contact": {
+        "title": "Vamos conversar",
+        "lead": "Estou aberta a oportunidades como desenvolvedora full stack. O jeito mais rápido de falar comigo é pelo LinkedIn.",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+      },
+      "footer": "Feito à mão, sem framework. Código aberto no GitHub."
+    },
+    "en": {
+      "lang": "en",
+      "path": "/en/",
+      "title": "Júlia Mendes — Full Stack Developer",
+      "description": "Portfolio of Júlia Mendes, full stack developer. End-to-end web products in TypeScript, Python, Go, Rust, Java and Kotlin, with tests, security and production-grade infrastructure.",
+      "nav": {
+        "projects": "Projects",
+        "approach": "How I work",
+        "stack": "Stack",
+        "contact": "Contact",
+        "switch": "Português",
+        "skip": "Skip to content",
+        "theme": "Toggle theme"
+      },
+      "hero": {
+        "eyebrow": "Full Stack Developer",
+        "title": "I build complete web products, from the database to the interface.",
+        "lead": "I like turning real problems into dependable software: well-tested business rules, secure APIs, accessible interfaces, and everything ready to run in production.",
+        "ctaProjects": "See projects",
+        "ctaContact": "Get in touch",
+        "facts": ["11 open source projects", "7 languages", "Tests, CI and Docker in all of them"]
+      },
+      "projects": {
+        "title": "Projects",
+        "lead": "Every project solves a concrete problem and ships with tests, CI, Docker and documentation. The stack is chosen by what the problem needs.",
+        "featured": "Featured",
+        "more": "More projects",
+        "filterAll": "All",
+        "problem": "Problem",
+        "highlights": "Technical highlights",
+        "repo": "Code",
+        "shotAlt": "Screenshot of {name}"
+      },
+      "approach": {
+        "title": "How I work",
+        "items": [
+          {
+            "title": "Business rules first",
+            "text": "I keep the domain in pure, testable code. Money in cents, explicit time zones, declared state machines."
+          },
+          {
+            "title": "Secure by default",
+            "text": "Strict CSP, input validation, rate limiting, XSS and CSV-injection protection, secrets kept out of code."
+          },
+          {
+            "title": "Production-ready",
+            "text": "Non-root Docker images with healthchecks, versioned migrations, structured logs, graceful shutdown."
+          },
+          {
+            "title": "Automated quality",
+            "text": "Domain, API and database tests in CI, plus linting, type checks and a container smoke test on every PR."
+          }
+        ]
+      },
+      "stack": {
+        "title": "Stack",
+        "groups": [
+          { "name": "Languages", "items": ["TypeScript", "JavaScript", "Python", "Go", "Rust", "Java", "Kotlin"] },
+          { "name": "Backend", "items": ["Node.js", "Express", "Fastify", "FastAPI", "Spring Boot", "axum", "chi"] },
+          { "name": "Data", "items": ["PostgreSQL", "SQLite", "SQLAlchemy", "Flyway", "Alembic", "FTS5"] },
+          { "name": "Frontend", "items": ["Semantic HTML", "Modern CSS", "Accessibility", "PWA", "Dark mode"] },
+          { "name": "Infra & quality", "items": ["Docker", "GitHub Actions", "Automated tests", "ESLint", "Ruff", "Clippy"] }
+        ]
+      },
+      "contact": {
+        "title": "Let's talk",
+        "lead": "I'm open to full stack developer opportunities. The fastest way to reach me is on LinkedIn.",
+        "linkedin": "LinkedIn",
+        "github": "GitHub"
+      },
+      "footer": "Handcrafted, no framework. Open source on GitHub."
+    }
+  },
+  "projects": [
+    {
+      "slug": "contajusta",
+      "name": "ContaJusta",
+      "featured": true,
+      "language": "Node.js",
+      "tags": ["Node.js", "Express", "SQLite", "PWA", "Docker"],
+      "pt": {
+        "summary": "Divisão de despesas em grupo com convite por link, saldos e acertos sugeridos.",
+        "problem": "Dividir contas de viagem ou de casa sem planilha e sem erro de centavos.",
+        "highlights": [
+          "Valores em centavos inteiros e divisão exata (igual ou por pessoa)",
+          "Grupos privados por link secreto de 128 bits",
+          "Histórico auditável de edições e PWA instalável com modo escuro"
+        ]
+      },
+      "en": {
+        "summary": "Group expense splitting with invite links, balances and suggested settlements.",
+        "problem": "Splitting trip or household costs without spreadsheets or rounding errors.",
+        "highlights": [
+          "Integer cents and exact splits (equal or per person)",
+          "Private groups behind 128-bit secret links",
+          "Auditable edit history and installable PWA with dark mode"
+        ]
+      }
+    },
+    {
+      "slug": "entregaviva",
+      "name": "EntregaViva",
+      "featured": true,
+      "language": "Go",
+      "tags": ["Go", "chi", "SSE", "SQLite", "Docker"],
+      "pt": {
+        "summary": "Painel de pedidos em tempo real entre restaurante, cozinha e entregadores.",
+        "problem": "Coordenar o status de cada pedido em várias telas ao mesmo tempo, sem recarregar.",
+        "highlights": [
+          "Máquina de estados explícita validada no servidor",
+          "Hub de Server-Sent Events não bloqueante, com replay e resync",
+          "Rastreio público por código sem expor dados pessoais"
+        ]
+      },
+      "en": {
+        "summary": "Real-time order board between restaurant, kitchen and couriers.",
+        "problem": "Keeping every order's status in sync across many screens without reloading.",
+        "highlights": [
+          "Explicit server-side order state machine",
+          "Non-blocking Server-Sent Events hub with replay and resync",
+          "Public tracking by code without leaking personal data"
+        ]
+      }
+    },
+    {
+      "slug": "specsentry",
+      "name": "SpecSentry",
+      "featured": true,
+      "language": "Rust",
+      "tags": ["Rust", "axum", "clap", "OpenAPI", "CI"],
+      "pt": {
+        "summary": "Detecta mudanças que quebram contratos OpenAPI antes do release.",
+        "problem": "APIs quebram clientes quando um campo some ou vira obrigatório sem ninguém perceber.",
+        "highlights": [
+          "Um único motor de diff usado pela API e pela CLI",
+          "Resolução de $ref com proteção contra ciclos e 26 regras com severidade",
+          "Gate de CI com anotações no GitHub e imagem distroless"
+        ]
+      },
+      "en": {
+        "summary": "Catches breaking OpenAPI contract changes before release.",
+        "problem": "APIs break clients when a field disappears or becomes required unnoticed.",
+        "highlights": [
+          "One diff engine shared by the API and the CLI",
+          "Cycle-safe $ref resolution and 26 rules with severities",
+          "CI gate with GitHub annotations and a distroless image"
+        ]
+      }
+    },
+    {
+      "slug": "agentledger",
+      "name": "AgentLedger",
+      "featured": true,
+      "language": "Java",
+      "tags": ["Java 21", "Spring Boot", "PostgreSQL", "Flyway", "Docker"],
+      "pt": {
+        "summary": "Gate de aprovação e trilha de auditoria para ações de agentes de IA.",
+        "problem": "Agentes de IA executando ações arriscadas sem revisão humana nem registro confiável.",
+        "highlights": [
+          "Motor de políticas extensível em Java puro",
+          "Trilha de auditoria append-only encadeada por SHA-256",
+          "Testes de integração contra PostgreSQL real no CI"
+        ]
+      },
+      "en": {
+        "summary": "Approval gate and audit trail for AI agent actions.",
+        "problem": "AI agents running risky actions without human review or a trustworthy record.",
+        "highlights": [
+          "Extensible policy engine in plain Java",
+          "Append-only, SHA-256 hash-chained audit trail",
+          "Integration tests against real PostgreSQL in CI"
+        ]
+      }
+    },
+    {
+      "slug": "importkit",
+      "name": "ImportKit",
+      "featured": true,
+      "language": "Python",
+      "tags": ["Python", "FastAPI", "SQLAlchemy", "Alembic", "Docker"],
+      "pt": {
+        "summary": "Fluxo embutível de importação de CSV com validação, revisão e desfazer.",
+        "problem": "Importar planilhas de clientes é frágil: separadores, encodings e linhas inválidas.",
+        "highlights": [
+          "Parser robusto: delimitador, BOM, encoding e quebras de linha entre aspas",
+          "Commit e reversão idempotentes e seguros sob concorrência",
+          "Relatório de erros protegido contra CSV injection"
+        ]
+      },
+      "en": {
+        "summary": "Embeddable CSV import flow with validation, review and undo.",
+        "problem": "Importing customer spreadsheets is fragile: delimiters, encodings and bad rows.",
+        "highlights": [
+          "Robust parser: delimiter, BOM, encoding and quoted newlines",
+          "Idempotent, concurrency-safe commit and revert",
+          "Error report hardened against CSV injection"
+        ]
+      }
+    },
+    {
+      "slug": "pratosalvo",
+      "name": "PratoSalvo",
+      "featured": true,
+      "language": "Node.js",
+      "tags": ["Node.js", "Express", "SQLite", "Mobile first", "Docker"],
+      "pt": {
+        "summary": "Marketplace de refeições excedentes com reserva e retirada no balcão.",
+        "problem": "Restaurantes descartam comida boa no fim do dia e clientes não ficam sabendo.",
+        "highlights": [
+          "Reservas atômicas sem overbooking, testadas com vários processos",
+          "Códigos de retirada não adivinháveis e de uso único",
+          "Interface mobile first com modo escuro"
+        ]
+      },
+      "en": {
+        "summary": "Surplus meal marketplace with reservations and counter pickup.",
+        "problem": "Restaurants throw away good food at closing time and customers never hear about it.",
+        "highlights": [
+          "Atomic reservations with no overbooking, tested across processes",
+          "Unguessable, single-use pickup codes",
+          "Mobile-first interface with dark mode"
+        ]
+      }
+    },
+    {
+      "slug": "accesswindow",
+      "name": "AccessWindow",
+      "featured": false,
+      "language": "Kotlin",
+      "tags": ["Kotlin", "Spring Boot", "PostgreSQL", "Flyway"],
+      "pt": {
+        "summary": "Revisão periódica de acessos com dono, justificativa e prazo.",
+        "problem": "Permissões esquecidas ficam ativas por anos e ninguém sabe quem as aprovou.",
+        "highlights": [
+          "Prazos por dia de calendário com fuso configurável",
+          "Revogação e renovação com trilha de eventos",
+          "Domínio em Kotlin puro com sealed classes"
+        ]
+      },
+      "en": {
+        "summary": "Periodic access reviews with an owner, a reason and a due date.",
+        "problem": "Forgotten permissions stay active for years and nobody knows who approved them.",
+        "highlights": [
+          "Calendar-day due dates with a configurable time zone",
+          "Revoke and renew with an event trail",
+          "Pure Kotlin domain with sealed classes"
+        ]
+      }
+    },
+    {
+      "slug": "localeguard",
+      "name": "LocaleGuard",
+      "featured": false,
+      "language": "TypeScript",
+      "tags": ["TypeScript", "Fastify", "Zod", "Vitest", "CLI"],
+      "pt": {
+        "summary": "QA de localização: traduções faltantes, placeholders e textos RTL.",
+        "problem": "Traduções quebradas só aparecem quando o usuário já está vendo a tela errada.",
+        "highlights": [
+          "Parser de ICU, printf e mustache",
+          "Tamanho medido por grafemas e plurais por idioma",
+          "Mesmas checagens no dashboard e na CLI de CI"
+        ]
+      },
+      "en": {
+        "summary": "Localization QA: missing translations, placeholders and RTL text.",
+        "problem": "Broken translations only show up once users are already looking at the wrong screen.",
+        "highlights": [
+          "ICU, printf and mustache placeholder parser",
+          "Grapheme-based length budgets and per-locale plurals",
+          "Same checks in the dashboard and the CI CLI"
+        ]
+      }
+    },
+    {
+      "slug": "resolveai",
+      "name": "ResolveAI",
+      "featured": false,
+      "language": "Python",
+      "tags": ["Python", "FastAPI", "SQLite FTS5", "LLM"],
+      "pt": {
+        "summary": "Central de atendimento com sugestões de resposta citando a base de conhecimento.",
+        "problem": "Atendentes perdem tempo procurando a resposta certa e sem saber de onde ela veio.",
+        "highlights": [
+          "Busca FTS5/BM25 com normalização de português",
+          "Sugestões só citam fontes realmente recuperadas",
+          "Provedores plugáveis, com modo local sem chave de API"
+        ]
+      },
+      "en": {
+        "summary": "Support desk with reply suggestions that cite the knowledge base.",
+        "problem": "Agents waste time hunting for the right answer without knowing where it came from.",
+        "highlights": [
+          "FTS5/BM25 search with Portuguese normalization",
+          "Suggestions cite only sources that were actually retrieved",
+          "Pluggable providers, including a local keyless mode"
+        ]
+      }
+    },
+    {
+      "slug": "estoquecerto",
+      "name": "EstoqueCerto",
+      "featured": false,
+      "language": "Node.js",
+      "tags": ["Node.js", "Express", "SQLite", "FEFO"],
+      "pt": {
+        "summary": "Estoque de restaurante com lotes, validade e cálculo de porções.",
+        "problem": "Ingredientes vencem no fundo da geladeira e a cozinha não sabe quanto ainda pode servir.",
+        "highlights": [
+          "Quantidades exatas em inteiros, sem erro de ponto flutuante",
+          "Consumo FEFO que ignora lotes vencidos",
+          "Movimentações imutáveis garantidas no banco"
+        ]
+      },
+      "en": {
+        "summary": "Restaurant inventory with lots, expiry dates and portion planning.",
+        "problem": "Ingredients expire at the back of the fridge and the kitchen can't tell how much it can still serve.",
+        "highlights": [
+          "Exact integer quantities, no floating-point drift",
+          "FEFO consumption that skips expired lots",
+          "Database-enforced immutable stock movements"
+        ]
+      }
+    },
+    {
+      "slug": "company-pulse",
+      "name": "Company Pulse",
+      "featured": false,
+      "language": "Node.js",
+      "tags": ["Node.js", "node:sqlite", "RBAC", "Zero deps"],
+      "pt": {
+        "summary": "Workspace executivo que transforma sinais da empresa em decisões rastreáveis.",
+        "problem": "Decisões importantes se perdem entre planilhas, sem dono e sem justificativa.",
+        "highlights": [
+          "Recomendações determinísticas e explicáveis",
+          "Permissões por papel aplicadas no servidor",
+          "Zero dependências de runtime"
+        ]
+      },
+      "en": {
+        "summary": "Executive workspace that turns company signals into traceable decisions.",
+        "problem": "Important decisions get lost across spreadsheets, without an owner or a rationale.",
+        "highlights": ["Deterministic, explainable recommendations", "Server-enforced role-based permissions", "Zero runtime dependencies"]
+      }
+    }
+  ]
+}
