@@ -27,7 +27,7 @@
         "lead": "Gosto de transformar problemas reais em software confiável: regras de negócio bem testadas, APIs seguras, interfaces acessíveis e tudo pronto para rodar em produção.",
         "ctaProjects": "Ver projetos",
         "ctaContact": "Falar comigo",
-        "facts": ["13 projetos open source", "7 linguagens", "2 prêmios em hackathons"]
+        "facts": ["16 projetos open source", "7 linguagens", "2 prêmios em hackathons"]
       },
       "projects": {
         "title": "Projetos",
@@ -205,7 +205,7 @@
         "lead": "I like turning real problems into dependable software: well-tested business rules, secure APIs, accessible interfaces, and everything ready to run in production.",
         "ctaProjects": "See projects",
         "ctaContact": "Get in touch",
-        "facts": ["13 open source projects", "7 languages", "2 hackathon awards"]
+        "facts": ["16 open source projects", "7 languages", "2 hackathon awards"]
       },
       "projects": {
         "title": "Projects",
@@ -686,6 +686,85 @@
         "summary": "Executive workspace that turns company signals into traceable decisions.",
         "problem": "Important decisions get lost across spreadsheets, without an owner or a rationale.",
         "highlights": ["Deterministic, explainable recommendations", "Server-enforced role-based permissions", "Zero runtime dependencies"]
+      }
+    },
+    {
+      "slug": "resenhamarket",
+      "name": "ResenhaMarket",
+      "demo": "https://resenhamarket.vercel.app",
+      "featured": false,
+      "language": "Java",
+      "tags": ["Java 21", "Spring Boot", "React", "TypeScript", "PostgreSQL", "Flyway", "Docker"],
+      "pt": {
+        "summary": "Controle de estoque simples e genérico para pequenos estabelecimentos com saldo que não negativa e livro-razão imutável.",
+        "problem": "Pequenos comércios usam cadernos ou planilhas frágeis que permitem saldo negativo e não registram quem movimentou o item.",
+        "highlights": [
+          "Bloqueio pessimista por produto que impede estoque negativo sob concorrência",
+          "Livro de movimentações imutável com endpoint de conciliação de saldo em tempo real",
+          "Interface responsiva em React e TypeScript com filtros por situação e linha do tempo"
+        ]
+      },
+      "en": {
+        "summary": "Simple, domain-generic inventory management for small businesses with non-negative balance guarantees and an immutable ledger.",
+        "problem": "Small shops rely on paper notebooks or brittle spreadsheets that allow negative stock and lose track of who recorded each movement.",
+        "highlights": [
+          "Pessimistic row locking per product preventing negative stock under high concurrency",
+          "Immutable stock movements ledger with real-time balance reconciliation",
+          "Responsive React and TypeScript frontend with status filters and event timeline"
+        ]
+      }
+    },
+    {
+      "slug": "secretaria",
+      "repo": "secretar.ia",
+      "name": "Secretar.ia",
+      "featured": false,
+      "language": "Python",
+      "tags": ["Python", "FastAPI", "Prisma", "Next.js", "PostgreSQL", "Gemini", "Docker"],
+      "pt": {
+        "summary": "Secretária virtual no WhatsApp para clínicas de saúde e estética com IA, agenda multi-tenant e confirmações.",
+        "problem": "Clínicas perdem consultas e sobrecarregam a recepção respondendo dúvidas repetitivas e confirmando horários manualmente no WhatsApp.",
+        "highlights": [
+          "Atendimento automatizado via WhatsApp com extração de intenção por IA (Gemini REST) e fallback determinístico",
+          "Agendamento sem colisão com cálculo de horários livres por janelas de atendimento da clínica",
+          "Arquitetura multi-tenant com isolamento estrito por tenant, jobs com SKIP LOCKED e billing Stripe"
+        ]
+      },
+      "en": {
+        "summary": "Virtual WhatsApp receptionist for healthcare and beauty clinics with AI booking, multi-tenant scheduling and reminders.",
+        "problem": "Clinics lose appointments and overload front desks answering repetitive queries and confirming slots manually on WhatsApp.",
+        "highlights": [
+          "Automated WhatsApp conversations with AI intent extraction (Gemini REST) and deterministic rule fallback",
+          "Collision-free booking calculating real available slots from clinic rules and calendar sync",
+          "Multi-tenant architecture with strict tenant isolation, SKIP LOCKED background jobs and Stripe billing"
+        ]
+      }
+    },
+    {
+      "slug": "norte",
+      "repo": "norte-app",
+      "name": "Norte",
+      "demo": "https://organiza-app-three.vercel.app",
+      "featured": false,
+      "language": "TypeScript",
+      "tags": ["React 19", "TypeScript", "Tailwind CSS", "Supabase", "PWA", "Web Audio API"],
+      "pt": {
+        "summary": "Organizador pessoal de rotina, tarefas com Matriz de Eisenhower, agenda acadêmica e sessões de foco com áudio binaural.",
+        "problem": "Estudantes e profissionais dispersam sua atenção usando vários aplicativos separados para tarefas, cronômetro pomodoro e hábitos.",
+        "highlights": [
+          "Matriz de Eisenhower interativa com filtros de prioridade e modo offline com sincronização híbrida via LocalStorage",
+          "Temporizador Pomodoro com síntese de som ambiente e ruído branco em tempo real via Web Audio API",
+          "Backend e autenticação no Supabase com Row Level Security e PWA instalável"
+        ]
+      },
+      "en": {
+        "summary": "Personal daily organizer with Eisenhower matrix task management, academic calendar and focus timer with binaural audio.",
+        "problem": "Students and professionals scatter their focus across disconnected apps for tasks, pomodoro timers and habit tracking.",
+        "highlights": [
+          "Interactive Eisenhower matrix with priority filtering and offline support with hybrid LocalStorage sync",
+          "Pomodoro focus timer with real-time ambient noise and sound synthesis via the Web Audio API",
+          "Supabase backend and auth secured with Row Level Security, packaged as an installable PWA"
+        ]
       }
     }
   ]
