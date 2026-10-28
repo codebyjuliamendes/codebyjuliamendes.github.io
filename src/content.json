@@ -27,7 +27,7 @@
         "lead": "Gosto de transformar problemas reais em software confiável: regras de negócio bem testadas, APIs seguras, interfaces acessíveis e tudo pronto para rodar em produção.",
         "ctaProjects": "Ver projetos",
         "ctaContact": "Falar comigo",
-        "facts": ["17 projetos open source", "7 linguagens", "3 prêmios em hackathons"]
+        "facts": ["18 projetos open source", "7 linguagens", "3 prêmios em hackathons"]
       },
       "projects": {
         "title": "Projetos",
@@ -205,7 +205,7 @@
         "lead": "I like turning real problems into dependable software: well-tested business rules, secure APIs, accessible interfaces, and everything ready to run in production.",
         "ctaProjects": "See projects",
         "ctaContact": "Get in touch",
-        "facts": ["17 open source projects", "7 languages", "3 hackathon awards"]
+        "facts": ["18 open source projects", "7 languages", "3 hackathon awards"]
       },
       "projects": {
         "title": "Projects",
@@ -790,6 +790,32 @@
           "Semantic natural language query engine powered by LLMs with structured intent extraction over public fiscal data",
           "Integrated text-to-speech (TTS) accessibility pipeline generating audio summaries for visually impaired citizens",
           "Modular NestJS 11 backend with Prisma ORM, PostgreSQL via Docker Compose, and secure server-side proxies in Next.js 16"
+        ]
+      }
+    },
+    {
+      "slug": "recuperapix",
+      "repo": "recuperapix",
+      "name": "RecuperaPix",
+      "featured": false,
+      "language": "TypeScript",
+      "tags": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS", "Pix Dinâmico", "WhatsApp Automation"],
+      "pt": {
+        "summary": "SaaS B2B para empresários e PMEs recuperarem faturas e boletos atrasados no WhatsApp com Pix Dinâmico e réguas automáticas humanizadas.",
+        "problem": "Pequenas e médias empresas perdem até 20% do faturamento com clientes que atrasam pagamentos e sofrem com cobranças manuais constrangedoras.",
+        "highlights": [
+          "Régua inteligente e humanizada de cobrança pelo WhatsApp com mensagens calibradas de D-3 a D+7 sem atrito",
+          "Geração instantânea de QR Code Pix e código Copia e Cola dinâmico conciliado em tempo real",
+          "Dashboard executivo com calculadora de ROI, aging lists e simulação de pagamento sandbox com confetes"
+        ]
+      },
+      "en": {
+        "summary": "B2B SaaS helping small and medium business owners recover unpaid invoices via WhatsApp with dynamic instant Pix QR codes and automated dunning.",
+        "problem": "Small and medium businesses lose up to 20% of net revenue to overdue receivables and struggle with awkward, manual collection phone calls.",
+        "highlights": [
+          "Empathetic automated WhatsApp dunning sequences calibrated from D-3 to D+7 to minimize friction",
+          "Instant dynamic Pix QR code and copy-paste generation with real-time settlement conciliation",
+          "Executive financial dashboard with interactive ROI calculator, aging lists, and sandbox instant payment simulation"
         ]
       }
     }
