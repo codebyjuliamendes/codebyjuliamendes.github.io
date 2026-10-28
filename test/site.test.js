@@ -71,3 +71,15 @@ test('assets referenciados existem no build', () => {
     for (const [, src] of page.matchAll(/(?:src|href)="(\/assets\/[^"]+)"/g)) assert.ok(existsSync(`dist${src}`), src);
   }
 });
+
+test('desktop: cada app tem janela, ícone e item no dock', () => {
+  for (const [lang, page] of Object.entries(html)) {
+    for (const [id] of content.i18n[lang].os.apps_list) {
+      assert.match(page, new RegExp(`<section class="window" id="${id}"`), `${lang} janela ${id}`);
+      assert.match(page, new RegExp(`class="desk-icon" href="#${id}"`), `${lang} ícone ${id}`);
+      assert.match(page, new RegExp(`class="dock-item" href="#${id}"`), `${lang} dock ${id}`);
+    }
+    const data = JSON.parse(page.match(/<script type="application\/json" id="page-data">([^<]*)<\/script>/)[1]);
+    assert.equal(data.projects.length, content.projects.length);
+  }
+});

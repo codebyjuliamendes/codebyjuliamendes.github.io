@@ -14,6 +14,8 @@
     ),
   };
   const root = document.documentElement;
+  // Ativa o modo "desktop" (janelas, dock); sem JS a página continua uma rolagem comum.
+  root.classList.add('os');
   let mode = 'auto';
   try {
     mode = MODES.includes(localStorage.getItem(KEY)) ? localStorage.getItem(KEY) : 'auto';
@@ -32,6 +34,21 @@
   }
 
   apply();
+  // Usado pelo terminal (comando tema).
+  window.portfolioTheme = {
+    set(next) {
+      if (!MODES.includes(next)) return false;
+      mode = next;
+      try {
+        localStorage.setItem(KEY, mode);
+      } catch {
+        /* preferência só na sessão */
+      }
+      apply();
+      return true;
+    },
+    get: () => mode,
+  };
   document.addEventListener('DOMContentLoaded', () => {
     apply();
     document.getElementById('theme-toggle')?.addEventListener('click', () => {

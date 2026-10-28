@@ -18,7 +18,8 @@
         "contact": "Contato",
         "switch": "English",
         "skip": "Pular para o conteúdo",
-        "theme": "Alternar tema"
+        "theme": "Alternar tema",
+        "play": "Jogar"
       },
       "hero": {
         "eyebrow": "Desenvolvedora Full Stack",
@@ -92,7 +93,96 @@
         "linkedin": "LinkedIn",
         "github": "GitHub"
       },
-      "footer": "Feito à mão, sem framework. Código aberto no GitHub."
+      "footer": "Feito à mão, sem framework. Código aberto no GitHub.",
+      "play": {
+        "rotateLabel": "Gosto de construir",
+        "rotate": ["APIs seguras", "interfaces acessíveis", "sistemas em tempo real", "regras de negócio testadas", "produtos com IA"],
+        "terminalInput": "Digite um comando",
+        "term": {
+          "welcome": "Bem-vinda(o) ao terminal da Júlia. Digite ajuda para ver os comandos.",
+          "help": [
+            ["ajuda", "lista os comandos"],
+            ["sobre", "quem sou eu"],
+            ["projetos", "lista os projetos"],
+            ["ver <projeto>", "detalhes de um projeto"],
+            ["abrir <projeto>", "abre o repositório"],
+            ["filtrar <linguagem>", "filtra os cards da página"],
+            ["stack", "tecnologias que uso"],
+            ["contato", "onde me encontrar"],
+            ["tema <claro|escuro|auto>", "troca o tema"],
+            ["idioma", "muda para inglês"],
+            ["jogar", "caça aos bugs"],
+            ["limpar", "limpa a tela"],
+            ["sair", "fecha o terminal"]
+          ],
+          "about": "Júlia Mendes, desenvolvedora full stack. Construo produtos web completos, do banco de dados à interface, com testes, segurança e infraestrutura de produção.",
+          "notFound": "comando não encontrado: {cmd}. Tente ajuda.",
+          "noProject": "projeto não encontrado: {name}. Use projetos para ver a lista.",
+          "usage": "uso: {usage}",
+          "opening": "abrindo {name}…",
+          "filtered": "{count} projeto(s) em {lang}.",
+          "noLang": "linguagem não encontrada. Opções: {list}",
+          "theme": "tema: {mode}",
+          "themes": [
+            ["claro", "light"],
+            ["escuro", "dark"],
+            ["auto", "auto"]
+          ],
+          "hire": "Permissão concedida. 🎉 Bora conversar? → LinkedIn",
+          "sudo": "julia não está no arquivo sudoers. Este incidente será reportado. 😄",
+          "rm": "Boa tentativa. Os dados ficam. 😄",
+          "coffee": "☕ Café passado. Produtividade +10.",
+          "hello": "Oi! 👋",
+          "game": "Bora caçar bugs…",
+          "fields": {
+            "problem": "problema",
+            "stack": "stack",
+            "repo": "código",
+            "demo": "demo"
+          }
+        },
+        "game": {
+          "title": "Pausa para o café",
+          "lead": "Esmague o máximo de bugs em 20 segundos. Joaninhas douradas valem 5 pontos e acertos seguidos multiplicam o placar.",
+          "start": "Começar",
+          "again": "Jogar de novo",
+          "score": "Pontos",
+          "best": "Recorde",
+          "time": "Tempo",
+          "combo": "Combo",
+          "canvas": "Área do jogo. Clique ou toque nos bugs para esmagá-los.",
+          "ranks": [
+            [0, "Os bugs venceram desta vez. Mais café?"],
+            [15, "Bom começo: passou no lint."],
+            [40, "Code review aprovado!"],
+            [80, "Pronta para o deploy de sexta-feira."],
+            [130, "Lenda do zero bugs. 🏆"]
+          ],
+          "result": "Fim! {score} pontos. {rank}",
+          "record": "Novo recorde!"
+        }
+      },
+      "os": {
+        "name": "JúliaOS",
+        "boot": "Iniciando JúliaOS…",
+        "bootSkip": "Clique para pular",
+        "close": "Fechar",
+        "minimize": "Minimizar",
+        "maximize": "Maximizar",
+        "apps": "Apps",
+        "dock": "Dock",
+        "desktop": "Área de trabalho",
+        "apps_list": [
+          ["sobre", "Sobre mim", "sobre-mim.txt"],
+          ["projetos", "Projetos", "~/projetos"],
+          ["como-trabalho", "Como trabalho", "como-trabalho.md"],
+          ["stack", "Stack", "stack.json"],
+          ["jogar", "Caça aos bugs", "cacabugs.exe"],
+          ["terminal", "Terminal", "julia@portfolio: ~"],
+          ["contato", "Contato", "nova-mensagem"]
+        ],
+        "stickers": ["oi! 👋", "feito com ☕", "zero bugs*", "*quase"]
+      }
     },
     "en": {
       "lang": "en",
@@ -106,7 +196,8 @@
         "contact": "Contact",
         "switch": "Português",
         "skip": "Skip to content",
-        "theme": "Toggle theme"
+        "theme": "Toggle theme",
+        "play": "Play"
       },
       "hero": {
         "eyebrow": "Full Stack Developer",
@@ -180,7 +271,96 @@
         "linkedin": "LinkedIn",
         "github": "GitHub"
       },
-      "footer": "Handcrafted, no framework. Open source on GitHub."
+      "footer": "Handcrafted, no framework. Open source on GitHub.",
+      "play": {
+        "rotateLabel": "I love building",
+        "rotate": ["secure APIs", "accessible interfaces", "real-time systems", "well-tested business rules", "AI-powered products"],
+        "terminalInput": "Type a command",
+        "term": {
+          "welcome": "Welcome to Júlia's terminal. Type help to see the commands.",
+          "help": [
+            ["help", "list commands"],
+            ["about", "who I am"],
+            ["projects", "list projects"],
+            ["show <project>", "project details"],
+            ["open <project>", "open the repository"],
+            ["filter <language>", "filter the cards on the page"],
+            ["stack", "technologies I use"],
+            ["contact", "where to find me"],
+            ["theme <light|dark|auto>", "switch theme"],
+            ["lang", "switch to Portuguese"],
+            ["play", "bug hunt"],
+            ["clear", "clear the screen"],
+            ["exit", "close the terminal"]
+          ],
+          "about": "Júlia Mendes, full stack developer. I build complete web products, from the database to the interface, with tests, security and production-ready infrastructure.",
+          "notFound": "command not found: {cmd}. Try help.",
+          "noProject": "project not found: {name}. Use projects to see the list.",
+          "usage": "usage: {usage}",
+          "opening": "opening {name}…",
+          "filtered": "{count} project(s) in {lang}.",
+          "noLang": "language not found. Options: {list}",
+          "theme": "theme: {mode}",
+          "themes": [
+            ["light", "light"],
+            ["dark", "dark"],
+            ["auto", "auto"]
+          ],
+          "hire": "Permission granted. 🎉 Let's talk? → LinkedIn",
+          "sudo": "julia is not in the sudoers file. This incident will be reported. 😄",
+          "rm": "Nice try. The data stays. 😄",
+          "coffee": "☕ Fresh coffee. Productivity +10.",
+          "hello": "Hi! 👋",
+          "game": "Let's hunt some bugs…",
+          "fields": {
+            "problem": "problem",
+            "stack": "stack",
+            "repo": "code",
+            "demo": "demo"
+          }
+        },
+        "game": {
+          "title": "Coffee break",
+          "lead": "Squash as many bugs as you can in 20 seconds. Golden ladybugs are worth 5 points and hit streaks multiply your score.",
+          "start": "Start",
+          "again": "Play again",
+          "score": "Score",
+          "best": "Best",
+          "time": "Time",
+          "combo": "Combo",
+          "canvas": "Game area. Click or tap the bugs to squash them.",
+          "ranks": [
+            [0, "The bugs won this time. More coffee?"],
+            [15, "Good start: it passes the linter."],
+            [40, "Code review approved!"],
+            [80, "Ready for a Friday deploy."],
+            [130, "Zero-bug legend. 🏆"]
+          ],
+          "result": "Done! {score} points. {rank}",
+          "record": "New record!"
+        }
+      },
+      "os": {
+        "name": "JúliaOS",
+        "boot": "Booting JúliaOS…",
+        "bootSkip": "Click to skip",
+        "close": "Close",
+        "minimize": "Minimize",
+        "maximize": "Maximize",
+        "apps": "Apps",
+        "dock": "Dock",
+        "desktop": "Desktop",
+        "apps_list": [
+          ["sobre", "About me", "about-me.txt"],
+          ["projetos", "Projects", "~/projects"],
+          ["como-trabalho", "How I work", "how-i-work.md"],
+          ["stack", "Stack", "stack.json"],
+          ["jogar", "Bug hunt", "bughunt.exe"],
+          ["terminal", "Terminal", "julia@portfolio: ~"],
+          ["contato", "Contact", "new-message"]
+        ],
+        "stickers": ["hi! 👋", "made with ☕", "zero bugs*", "*almost"]
+      }
     }
   },
   "projects": [
