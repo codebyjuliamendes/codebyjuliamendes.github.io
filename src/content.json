@@ -26,18 +26,19 @@
         "lead": "Gosto de transformar problemas reais em software confiável: regras de negócio bem testadas, APIs seguras, interfaces acessíveis e tudo pronto para rodar em produção.",
         "ctaProjects": "Ver projetos",
         "ctaContact": "Falar comigo",
-        "facts": ["11 projetos open source", "7 linguagens", "Testes, CI e Docker em todos"]
+        "facts": ["13 projetos open source", "7 linguagens", "2 prêmios em hackathons"]
       },
       "projects": {
         "title": "Projetos",
-        "lead": "Cada projeto resolve um problema concreto e tem testes, CI, Docker e documentação. A stack foi escolhida pelo que o problema pede.",
+        "lead": "Cada projeto resolve um problema concreto e tem testes, CI e documentação. A stack foi escolhida pelo que o problema pede.",
         "featured": "Destaques",
         "more": "Mais projetos",
         "filterAll": "Todos",
         "problem": "Problema",
         "highlights": "Destaques técnicos",
         "repo": "Código",
-        "shotAlt": "Captura de tela do {name}"
+        "shotAlt": "Captura de tela do {name}",
+        "demo": "Demonstração"
       },
       "approach": {
         "title": "Como trabalho",
@@ -63,11 +64,26 @@
       "stack": {
         "title": "Stack",
         "groups": [
-          { "name": "Linguagens", "items": ["TypeScript", "JavaScript", "Python", "Go", "Rust", "Java", "Kotlin"] },
-          { "name": "Backend", "items": ["Node.js", "Express", "Fastify", "FastAPI", "Spring Boot", "axum", "chi"] },
-          { "name": "Dados", "items": ["PostgreSQL", "SQLite", "SQLAlchemy", "Flyway", "Alembic", "FTS5"] },
-          { "name": "Frontend", "items": ["HTML semântico", "CSS moderno", "Acessibilidade", "PWA", "Modo escuro"] },
-          { "name": "Infra e qualidade", "items": ["Docker", "GitHub Actions", "Testes automatizados", "ESLint", "Ruff", "Clippy"] }
+          {
+            "name": "Linguagens",
+            "items": ["TypeScript", "JavaScript", "Python", "Go", "Rust", "Java", "Kotlin"]
+          },
+          {
+            "name": "Backend",
+            "items": ["Node.js", "Express", "Fastify", "FastAPI", "Spring Boot", "axum", "chi"]
+          },
+          {
+            "name": "Dados",
+            "items": ["PostgreSQL", "SQLite", "SQLAlchemy", "Flyway", "Alembic", "FTS5"]
+          },
+          {
+            "name": "Frontend",
+            "items": ["HTML semântico", "CSS moderno", "Acessibilidade", "PWA", "Modo escuro"]
+          },
+          {
+            "name": "Infra e qualidade",
+            "items": ["Docker", "GitHub Actions", "Testes automatizados", "ESLint", "Ruff", "Clippy"]
+          }
         ]
       },
       "contact": {
@@ -98,18 +114,19 @@
         "lead": "I like turning real problems into dependable software: well-tested business rules, secure APIs, accessible interfaces, and everything ready to run in production.",
         "ctaProjects": "See projects",
         "ctaContact": "Get in touch",
-        "facts": ["11 open source projects", "7 languages", "Tests, CI and Docker in all of them"]
+        "facts": ["13 open source projects", "7 languages", "2 hackathon awards"]
       },
       "projects": {
         "title": "Projects",
-        "lead": "Every project solves a concrete problem and ships with tests, CI, Docker and documentation. The stack is chosen by what the problem needs.",
+        "lead": "Every project solves a concrete problem and ships with tests, CI and documentation. The stack is chosen by what the problem needs.",
         "featured": "Featured",
         "more": "More projects",
         "filterAll": "All",
         "problem": "Problem",
         "highlights": "Technical highlights",
         "repo": "Code",
-        "shotAlt": "Screenshot of {name}"
+        "shotAlt": "Screenshot of {name}",
+        "demo": "Live demo"
       },
       "approach": {
         "title": "How I work",
@@ -135,11 +152,26 @@
       "stack": {
         "title": "Stack",
         "groups": [
-          { "name": "Languages", "items": ["TypeScript", "JavaScript", "Python", "Go", "Rust", "Java", "Kotlin"] },
-          { "name": "Backend", "items": ["Node.js", "Express", "Fastify", "FastAPI", "Spring Boot", "axum", "chi"] },
-          { "name": "Data", "items": ["PostgreSQL", "SQLite", "SQLAlchemy", "Flyway", "Alembic", "FTS5"] },
-          { "name": "Frontend", "items": ["Semantic HTML", "Modern CSS", "Accessibility", "PWA", "Dark mode"] },
-          { "name": "Infra & quality", "items": ["Docker", "GitHub Actions", "Automated tests", "ESLint", "Ruff", "Clippy"] }
+          {
+            "name": "Languages",
+            "items": ["TypeScript", "JavaScript", "Python", "Go", "Rust", "Java", "Kotlin"]
+          },
+          {
+            "name": "Backend",
+            "items": ["Node.js", "Express", "Fastify", "FastAPI", "Spring Boot", "axum", "chi"]
+          },
+          {
+            "name": "Data",
+            "items": ["PostgreSQL", "SQLite", "SQLAlchemy", "Flyway", "Alembic", "FTS5"]
+          },
+          {
+            "name": "Frontend",
+            "items": ["Semantic HTML", "Modern CSS", "Accessibility", "PWA", "Dark mode"]
+          },
+          {
+            "name": "Infra & quality",
+            "items": ["Docker", "GitHub Actions", "Automated tests", "ESLint", "Ruff", "Clippy"]
+          }
         ]
       },
       "contact": {
@@ -174,6 +206,59 @@
           "Integer cents and exact splits (equal or per person)",
           "Private groups behind 128-bit secret links",
           "Auditable edit history and installable PWA with dark mode"
+        ]
+      }
+    },
+    {
+      "slug": "safecat",
+      "repo": "ia-para-CAT-engenharia",
+      "name": "SafeCAT AI",
+      "featured": true,
+      "language": "Python",
+      "tags": ["Python", "Streamlit", "SQLAlchemy", "Claude API", "Docker"],
+      "pt": {
+        "summary": "Registro de acidentes de trabalho no formato da CAT (eSocial S-2210), com investigação de causa raiz e indicadores para o SESMT. Campeão de hackathon (SESMT & Indústria 4.0).",
+        "problem": "Preencher a CAT pelas tabelas do eSocial é lento e sujeito a erro, e muitos acidentes nunca passam por uma análise de causa raiz.",
+        "highlights": [
+          "Validação dos campos exigidos pelo S-2210 com pendências apontadas antes do envio",
+          "5 Porquês com IA de saída estruturada e modo demonstração sem chave",
+          "Painel HSE com mapa corporal, taxas por setor e retenção de dados (LGPD)"
+        ]
+      },
+      "en": {
+        "summary": "Workplace accident reports in the Brazilian CAT format (eSocial S-2210), with root-cause analysis and safety indicators. Hackathon winner (SESMT & Industry 4.0).",
+        "problem": "Filling in the CAT against eSocial code tables is slow and error-prone, and many accidents never get a root-cause analysis.",
+        "highlights": [
+          "Validation of every S-2210 required field, with gaps flagged before filing",
+          "AI-assisted 5 Whys with structured output and a key-free demo mode",
+          "Safety dashboard with a body map, per-sector rates and data retention (LGPD)"
+        ]
+      }
+    },
+    {
+      "slug": "tecida",
+      "repo": "entre_elas",
+      "demo": "https://entre-elas-omega.vercel.app/demonstracao",
+      "name": "Tecida (Entre Elas)",
+      "featured": true,
+      "language": "TypeScript",
+      "tags": ["Next.js", "TypeScript", "Supabase", "pgvector", "Playwright"],
+      "pt": {
+        "summary": "Rede de conhecimento entre as mulheres de uma empresa: a IA indica quem já viveu aquele desafio e marca uma conversa curta. Projeto em equipe, 3º lugar no Hackathon Equatorial (EQT Lab).",
+        "problem": "Em empresas distribuídas, a experiência que resolveria o problema de uma colaboradora está com outra pessoa, em outra área ou regional, e as duas não se conhecem.",
+        "highlights": [
+          "Indicações por similaridade semântica (pgvector) com a evidência de cada sugestão à vista",
+          "Consentimento em cada etapa e painel da liderança só com dados agregados",
+          "Piloto real com login Microsoft/Google, chat, vídeo e PWA"
+        ]
+      },
+      "en": {
+        "summary": "A knowledge network for the women in a company: AI suggests a colleague who has faced the same challenge and sets up a short conversation. Team project, 3rd place at the Equatorial Hackathon (EQT Lab).",
+        "problem": "In distributed companies, the experience that would solve one employee's problem sits with someone in another area or region, and they have never met.",
+        "highlights": [
+          "Semantic matching (pgvector) that shows the evidence behind every suggestion",
+          "Consent at every step and a leadership dashboard with aggregate data only",
+          "Live pilot with Microsoft/Google sign-in, chat, video and a PWA"
         ]
       }
     },

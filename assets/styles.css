@@ -468,12 +468,17 @@ h3 {
   color: var(--ink-2);
   font: 400 13px/1.6 var(--mono);
 }
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin-top: auto;
+  padding-top: 6px;
+}
 .card-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  margin-top: auto;
-  padding-top: 6px;
   color: var(--accent-text);
   font-weight: 600;
   text-decoration: none;

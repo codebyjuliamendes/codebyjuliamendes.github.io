@@ -26,7 +26,7 @@ npm run dev      # build + servidor local em http://localhost:4173
 npm run check    # Prettier + build + testes (node:test)
 ```
 
-Para adicionar um projeto, inclua um item em `projects` no `src/content.json` (textos em `pt` e `en`, 3 destaques cada) e, se quiser, as screenshots em `assets/projects/`. Os testes garantem que os dois idiomas têm a mesma estrutura, que todo projeto aparece com link para o repositório e que os assets referenciados existem.
+Para adicionar um projeto, inclua um item em `projects` no `src/content.json` (textos em `pt` e `en`, 3 destaques cada). Use `repo` quando o nome do repositório for diferente do `slug` e `demo` para um link de demonstração. Se quiser, adicione as screenshots em `assets/projects/`. Os testes garantem que os dois idiomas têm a mesma estrutura, que todo projeto aparece com link para o repositório e que os assets referenciados existem.
 
 ## Deploy
 

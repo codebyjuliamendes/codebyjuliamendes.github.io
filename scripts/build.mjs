@@ -47,7 +47,11 @@ function projectCard(project, t, { featured }) {
         ${dark ? `<img class="shot shot-dark" src="${dark}" alt="" width="1440" height="900" loading="lazy" decoding="async">` : ''}
       </div>`
     : `<div class="card-media card-media-empty" aria-hidden="true"><span>${escapeHtml(project.name)}</span></div>`;
-  const repo = `${site.github}/${project.slug}`;
+  // `repo` cobre repositórios cujo nome difere do slug; `demo` é opcional.
+  const repo = `${site.github}/${project.repo ?? project.slug}`;
+  const demo = project.demo
+    ? `<a class="card-link" href="${escapeHtml(project.demo)}" rel="noopener">${escapeHtml(t.projects.demo)} <span class="sr-only">${escapeHtml(project.name)}</span>${icons.arrow}</a>`
+    : '';
 
   return `<article class="card${featured ? ' card-featured' : ''}" data-language="${escapeHtml(slugify(project.language))}">
     ${featured ? media : ''}
@@ -67,7 +71,10 @@ function projectCard(project, t, { featured }) {
           : `<ul class="card-points">${copy.highlights.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`
       }
       <ul class="tags" aria-label="Stack">${project.tags.map(tag => `<li>${escapeHtml(tag)}</li>`).join('')}</ul>
-      <a class="card-link" href="${repo}" rel="noopener">${escapeHtml(t.projects.repo)} <span class="sr-only">${escapeHtml(project.name)}</span>${icons.arrow}</a>
+      <div class="card-links">
+        <a class="card-link" href="${repo}" rel="noopener">${escapeHtml(t.projects.repo)} <span class="sr-only">${escapeHtml(project.name)}</span>${icons.arrow}</a>
+        ${demo}
+      </div>
     </div>
   </article>`;
 }

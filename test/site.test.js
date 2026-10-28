@@ -41,7 +41,7 @@ test('todo projeto tem dados completos e slug único', () => {
 
 test('cada página lista todos os projetos com link para o repositório', () => {
   for (const page of Object.values(html)) {
-    for (const p of content.projects) assert.ok(page.includes(`${content.site.github}/${p.slug}"`), p.slug);
+    for (const p of content.projects) assert.ok(page.includes(`${content.site.github}/${p.repo ?? p.slug}"`), p.slug);
   }
 });
 
