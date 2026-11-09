@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entre Elas — Case study — Júlia Mendes</title>
+  <meta name="description" content="Case study: an AI curator that connects women across a large company through 20-minute conversations, matching people by meaning. 3rd place at Hackathon Equatorial." data-pt="Estudo de caso: uma curadoria de IA que conecta mulheres de uma grande empresa por conversas de 20 minutos, aproximando pessoas pelo significado. 3º lugar no Hackathon Equatorial.">
+  <meta name="theme-color" content="#0b0c10">
+  <link rel="canonical" href="https://codebyjuliamendes.github.io/case-entre-elas.html">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="i18n.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body data-title-pt="Entre Elas — Estudo de caso — Júlia Mendes">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <a class="logo" href="index.html">Júlia Mendes</a>
+    <div class="nav-right">
+      <div class="lang-slot"></div>
+      <a class="back" href="index.html#work">← All work</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="case-hero">
+      <p class="label accent">Case study · Hackathon Equatorial · 3rd place</p>
+      <h1 class="display">Entre <em>Elas</em></h1>
+      <p class="lead">An AI curator that connects women across a large company through 20-minute conversations called Faíscas, matching people by meaning instead of job titles.</p>
+      <dl class="meta-row" style="margin:0">
+        <div class="meta-item"><dt class="label">My role</dt><dd style="margin:0">Data &amp; AI, plus app development</dd></div>
+        <div class="meta-item"><dt class="label">Team</dt><dd style="margin:0">2 developers + 1 designer</dd></div>
+        <div class="meta-item"><dt class="label">Timeline</dt><dd style="margin:0">1-week MVP, then a live pilot with the jury</dd></div>
+        <div class="meta-item"><dt class="label">Stack</dt><dd style="margin:0">Next.js, Supabase + pgvector, Gemini, Groq, Zod</dd></div>
+      </dl>
+    </section>
+
+    <section class="section">
+      <div class="split">
+        <div>
+          <p class="label accent">01 — Problem</p>
+          <h2 class="h2">Networking happens after hours.</h2>
+        </div>
+        <div class="lead">
+          <p>Women in a large company rarely meet people outside their own team, and the usual networking happens after work, exactly when many of them, such as caregivers and mothers of atypical children, have no time.</p>
+          <p>The brief: a solution that lets colleagues exchange knowledge during work hours, with leadership able to see whether it actually connects different areas and regions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section surface border-top">
+      <div class="section-head">
+        <p class="label accent">02 — How the curator works</p>
+        <h2 class="h1">From a free-text request to an explained match.</h2>
+      </div>
+      <ol class="flow" style="list-style:none;margin:0;padding:0">
+        <li class="flow-step"><p class="label accent">01</p><h3 class="h3">Free-text request</h3><p class="small">“I need someone who can help me evaluate a RAG pipeline.”</p></li>
+        <li class="flow-arrow" aria-hidden="true">→</li>
+        <li class="flow-step"><p class="label accent">02</p><h3 class="h3">Extract needs</h3><p class="small">The LLM turns the request into 2 or 3 skills, returned as JSON validated with Zod.</p></li>
+        <li class="flow-arrow" aria-hidden="true">→</li>
+        <li class="flow-step"><p class="label accent">03</p><h3 class="h3">Semantic search</h3><p class="small">Embeddings + pgvector find people by similarity, not keywords.</p></li>
+        <li class="flow-arrow" aria-hidden="true">→</li>
+        <li class="flow-step hl"><p class="label accent">04</p><h3 class="h3">Rank &amp; explain</h3><p class="small">Up to 3 people, each with the literal evidence from their profile. Nothing invented.</p></li>
+        <li class="flow-arrow" aria-hidden="true">→</li>
+        <li class="flow-step"><p class="label accent">05</p><h3 class="h3">Faísca</h3><p class="small">A 20-minute conversation, scheduled inside work hours.</p></li>
+      </ol>
+      <p class="fallback"><span class="label accent">Resilience</span><span class="small">Gemini → Groq as automatic fallback. If the AI fails or times out, the participant continues on a manual path.</span></p>
+    </section>
+
+    <section class="section border-top">
+      <div class="section-head">
+        <p class="label accent">03 — Decisions &amp; trade-offs</p>
+        <h2 class="h1">Why it was built this way.</h2>
+      </div>
+      <div>
+        <div class="decision"><h3 class="h3">Semantic search over keyword filters</h3><p>People describe needs in free text. Embeddings match meaning, so “help with model evaluation” can find someone who never wrote that exact phrase.</p></div>
+        <div class="decision"><h3 class="h3">Every recommendation cites evidence</h3><p>The model may only use facts that exist in the profile. If there is no evidence, it says so. This is what keeps the curator trustworthy.</p></div>
+        <div class="decision"><h3 class="h3">Schema-validated JSON outputs</h3><p>Prompts do one task at a time and answer in JSON validated with Zod, so invalid output never reaches the screen.</p></div>
+        <div class="decision"><h3 class="h3">Privacy by design</h3><p>AI use is opt-in, a tip is published only when both participants agree, and chat messages never feed the knowledge map.</p></div>
+        <div class="decision"><h3 class="h3">A dashboard for leadership</h3><p>Aggregate numbers only: acceptance rate, connections across regions and areas, and knowledge that only one person holds.</p></div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Results">
+      <div class="stat"><strong>3rd</strong><span class="label">Hackathon Equatorial · EQT Lab</span></div>
+      <div class="stat"><strong>1 week</strong><span class="label">From brief to working MVP</span></div>
+      <div class="stat"><strong>6 days</strong><span class="label">Live pilot with the jury</span></div>
+      <div class="stat"><strong>Live</strong><span class="label">Public demo on Vercel</span></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="label accent">The product</p>
+        <h2 class="h1">Demo mode, with fictional people and data.</h2>
+      </div>
+      <div class="shots">
+        <figure>
+          <img src="img/entre-elas-desktop.webp" width="1440" height="900" loading="lazy" alt="Entre Elas demo, desktop">
+          <figcaption class="small">Demo mode, desktop. Fictional people and data.</figcaption>
+        </figure>
+        <figure>
+          <img src="img/entre-elas-mobile.webp" width="780" height="1688" loading="lazy" alt="Entre Elas demo, mobile">
+          <figcaption class="small">Installable PWA, mobile.</figcaption>
+        </figure>
+      </div>
+      <div class="ctas" style="margin-top:32px">
+        <a class="btn" href="https://entre-elas-omega.vercel.app/demonstracao">Open the live demo →</a>
+      </div>
+    </section>
+
+    <section class="section border-top">
+      <div class="section-head">
+        <p class="label accent">04 — What I’d do next</p>
+        <h2 class="h1">What a production version needs.</h2>
+      </div>
+      <div class="grid-3">
+        <article class="card next-card"><h3 class="h3">Measure match quality</h3><p class="small">Build an evaluation set of real requests with expected matches and report precision@3 on every change.</p></article>
+        <article class="card next-card"><h3 class="h3">Hybrid search + reranking</h3><p class="small">Combine keyword and vector search, then rerank, to cover exact names and rare skills.</p></article>
+        <article class="card next-card"><h3 class="h3">Load-test the index</h3><p class="small">Check pgvector latency and LLM cost per request at 10,000 profiles before a real rollout.</p></article>
+      </div>
+      <div class="ctas" style="margin-top:48px">
+        <a class="btn primary" href="https://github.com/codebyjuliamendes/entre_elas">View the code →</a>
+        <a class="btn" href="case-safecat-ai.html">Next case study</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="label">© 2026 Júlia Mendes · São Luís, Brazil</p>
+    <p class="label">Designed in Figma · Shipped on GitHub Pages</p>
+  </footer>
+</body>
+</html>
