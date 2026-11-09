@@ -1,4 +1,4 @@
-name: Build and deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -14,23 +14,31 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run check
+      - name: Check that every local link and asset exists
+        run: |
+          status=0
+          for page in *.html; do
+            for ref in $(grep -oE '(href|src)="[^"]*"' "$page" | sed -E 's/^(href|src)="//; s/"$//' | grep -v ':' | sed -E 's/[#?].*$//' | grep -v '^$'); do
+              if [ ! -e "$ref" ]; then echo "::error file=$page::missing $ref"; status=1; fi
+            done
+          done
+          exit $status
+      - name: Assemble the site
+        run: |
+          mkdir _site
+          cp -r *.html styles.css i18n.js site.js img .nojekyll _site/
+          [ -f cv.pdf ] && cp cv.pdf _site/ || true
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: _site
 
   deploy:
     if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: build
+    needs: check
     runs-on: ubuntu-latest
     permissions:
       pages: write

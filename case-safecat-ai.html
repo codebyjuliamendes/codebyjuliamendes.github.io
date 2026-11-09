@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SafeCAT AI — Case study — Júlia Mendes</title>
+  <meta name="description" content="Case study: workplace accident records in the eSocial S-2210 (CAT) format, an AI-assisted 5-Whys analysis checked against the report, and an HSE dashboard." data-pt="Estudo de caso: registro de acidentes de trabalho no formato do eSocial S-2210 (CAT), análise dos 5 Porquês com IA conferida contra o relato e um painel de SST.">
+  <meta name="theme-color" content="#0b0c10">
+  <link rel="canonical" href="https://codebyjuliamendes.github.io/case-safecat-ai.html">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="i18n.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body data-title-pt="SafeCAT AI — Estudo de caso — Júlia Mendes">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <a class="logo" href="index.html">Júlia Mendes</a>
+    <div class="nav-right">
+      <div class="lang-slot"></div>
+      <a class="back" href="index.html#work">← All work</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="case-hero">
+      <p class="label accent">Case study · AI · Hackathon project</p>
+      <h1 class="display">SafeCAT <em>AI</em></h1>
+      <p class="lead">A web app for workplace safety teams to record accidents with the data the eSocial S-2210 (CAT) event requires, investigate the root cause with an AI-assisted 5 Whys, and track safety indicators.</p>
+      <dl class="meta-row" style="margin:0">
+        <div class="meta-item"><dt class="label">Context</dt><dd style="margin:0">Hackathon, SESMT &amp; Industry 4.0</dd></div>
+        <div class="meta-item"><dt class="label">AI</dt><dd style="margin:0">Claude with structured output, plus a key-free demo mode</dd></div>
+        <div class="meta-item"><dt class="label">Quality</dt><dd style="margin:0">ruff, mypy --strict and pytest in CI</dd></div>
+        <div class="meta-item"><dt class="label">Stack</dt><dd style="margin:0">Python, Streamlit, SQLAlchemy, Claude API, Docker, Kubernetes</dd></div>
+      </dl>
+    </section>
+
+    <section class="section">
+      <div class="split">
+        <div>
+          <p class="label accent">01 — Problem</p>
+          <h2 class="h2">Accident reports are slow and error-prone.</h2>
+        </div>
+        <div class="lead">
+          <p>Filing a CAT means classifying the body part, causing agent, triggering situation and type of injury against eSocial tables, and transcribing the medical certificate. Mistakes and delays mean rework and penalties.</p>
+          <p>After filing, many incidents never get a root-cause investigation or an action plan, so the organization loses the chance to prevent a more serious accident.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section surface border-top">
+      <div class="section-head">
+        <p class="label accent">02 — How a report flows</p>
+        <h2 class="h1">From a medical certificate to a reviewed analysis.</h2>
+      </div>
+      <ol class="flow" style="list-style:none;margin:0;padding:0">
+        <li class="flow-step"><p class="label accent">01</p><h3 class="h3">Read the certificate</h3><p class="small">Text PDFs are read with pypdf. Scans go to the LLM’s vision only when a key is set. No field is filled unless it comes from the file.</p></li>
+        <li class="flow-arrow" aria-hidden="true">→</li>
+        <li class="flow-step"><p class="label accent">02</p><h3 class="h3">Validate the CAT</h3><p class="small">CPF, PIS/NIT, CID-10 and date checks, plus a list of S-2210 fields still missing.</p></li>
+        <li class="flow-arrow" aria-hidden="true">→</li>
+        <li class="flow-step"><p class="label accent">03</p><h3 class="h3">Suggest 5 Whys</h3><p class="small">Claude returns JSON validated against Pydantic models, with causes and controls.</p></li>
+        <li class="flow-arrow" aria-hidden="true">→</li>
+        <li class="flow-step hl"><p class="label accent">04</p><h3 class="h3">Check the evidence</h3><p class="small">Every quote the AI cites is checked against the report. If it is not there, that level is discarded.</p></li>
+        <li class="flow-arrow" aria-hidden="true">→</li>
+        <li class="flow-step"><p class="label accent">05</p><h3 class="h3">Human review</h3><p class="small">The safety team edits, reviews and signs. The record keeps who reviewed it.</p></li>
+      </ol>
+      <p class="fallback"><span class="label accent">Demo mode</span><span class="small">Without an API key, a deterministic mode asks the 5 Whys questions without answering them and never proposes a root cause.</span></p>
+    </section>
+
+    <section class="section border-top">
+      <div class="section-head">
+        <p class="label accent">03 — Decisions &amp; trade-offs</p>
+        <h2 class="h1">Why it was built this way.</h2>
+      </div>
+      <div>
+        <div class="decision"><h3 class="h3">Never invent a code</h3><p>The eSocial tables 13 to 17 ship empty until they are imported from the official source, because a made-up code would produce a wrong CAT.</p></div>
+        <div class="decision"><h3 class="h3">Prompt-injection defenses</h3><p>A fixed system prompt, user text sent as delimited data, delimiters neutralized, and every cited piece of evidence checked against the report.</p></div>
+        <div class="decision"><h3 class="h3">An auxiliary document, not a filing</h3><p>The PDF only contains validated data, marks missing fields as “not provided” and states that the official CAT is sent through eSocial.</p></div>
+        <div class="decision"><h3 class="h3">LGPD by design</h3><p>Masked CPF in lists, logs with IDs only, permanent deletion and a configurable retention purge.</p></div>
+        <div class="decision"><h3 class="h3">Hardened deployment</h3><p>A multi-stage image that runs as non-root with a read-only filesystem, health checks and Kubernetes manifests.</p></div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Results">
+      <div class="stat"><strong>100%</strong><span class="label">Test coverage of the domain rules</span></div>
+      <div class="stat"><strong>85%</strong><span class="label">Minimum coverage enforced in CI</span></div>
+      <div class="stat"><strong>0</strong><span class="label">Network calls in the LLM tests</span></div>
+      <div class="stat"><strong>S-1.3</strong><span class="label">eSocial layout checked against the XSD</span></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <p class="label accent">The product</p>
+        <h2 class="h1">HSE dashboard in demo mode.</h2>
+      </div>
+      <div class="shots">
+        <figure>
+          <img src="img/safecat-desktop.webp" width="1440" height="900" loading="lazy" alt="SafeCAT AI HSE dashboard with a body map and incidents per sector, desktop">
+          <figcaption class="small">HSE dashboard, desktop. Demo data.</figcaption>
+        </figure>
+        <figure>
+          <img src="img/safecat-mobile.webp" width="780" height="1688" loading="lazy" alt="SafeCAT AI on mobile">
+          <figcaption class="small">Mobile view.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section border-top">
+      <div class="section-head">
+        <p class="label accent">04 — What I’d do next</p>
+        <h2 class="h1">What the next version needs.</h2>
+      </div>
+      <div class="grid-3">
+        <article class="card next-card"><h3 class="h3">Import the official tables</h3><p class="small">Load eSocial tables 13 to 17 from the current official release and compare the CID-10 file with the latest DATASUS publication.</p></article>
+        <article class="card next-card"><h3 class="h3">Add authentication</h3><p class="small">The app has no access control of its own yet. Put SSO or an OIDC proxy in front of it before real use.</p></article>
+        <article class="card next-card"><h3 class="h3">Generate the S-2210 XML</h3><p class="small">Today it neither builds the XML nor transmits to eSocial, and the auxiliary PDF does not replace the official CAT.</p></article>
+      </div>
+      <div class="ctas" style="margin-top:48px">
+        <a class="btn primary" href="https://github.com/codebyjuliamendes/ia-para-CAT-engenharia">View the code →</a>
+        <a class="btn" href="case-secretaria-ia.html">Next case study</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="label">© 2026 Júlia Mendes · São Luís, Brazil</p>
+    <p class="label">Designed in Figma · Shipped on GitHub Pages</p>
+  </footer>
+</body>
+</html>
