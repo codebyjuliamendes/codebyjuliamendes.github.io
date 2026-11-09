@@ -59,7 +59,7 @@
     "Root-cause analysis · 5 Whys": "Análise de causa raiz · 5 Porquês",
     "Why 1": "Porquê 1", "Why 2": "Porquê 2", "Why 3": "Porquê 3", "Why 4": "Porquê 4", "Root cause": "Causa raiz",
     "CAT record · eSocial S-2210": "Registro da CAT · eSocial S-2210",
-    "AI · Hackathon project": "IA · Projeto de hackathon",
+    "AI · Hackathon winner · SESMT & Industry 4.0": "IA · Campeão de hackathon · SESMT e Indústria 4.0",
     "SafeCAT AI: accident reports with root-cause analysis": "SafeCAT AI: comunicação de acidentes com análise de causa raiz",
     "Records workplace accidents with the data eSocial S-2210 (CAT) requires, plus a Claude-assisted 5-Whys analysis and an HSE dashboard.": "Registra acidentes de trabalho com os dados que o eSocial S-2210 (CAT) exige, com análise dos 5 Porquês apoiada pelo Claude e um painel de SST.",
     "Hi! Do you have Thursday at 3pm?": "Oi! Tem horário quinta às 15h?",
@@ -192,9 +192,9 @@
     "Check pgvector latency and LLM cost per request at 10,000 profiles before a real rollout.": "Medir latência do pgvector e custo de LLM por requisição com 10.000 perfis antes de um lançamento real.",
 
     /* Case: SafeCAT AI */
-    "Case study · AI · Hackathon project": "Estudo de caso · IA · Projeto de hackathon",
+    "Case study · Hackathon winner · SESMT & Industry 4.0": "Estudo de caso · Campeão de hackathon · SESMT e Indústria 4.0",
     "A web app for workplace safety teams to record accidents with the data the eSocial S-2210 (CAT) event requires, investigate the root cause with an AI-assisted 5 Whys, and track safety indicators.": "Uma aplicação web para equipes de segurança do trabalho registrarem acidentes com os dados que o evento S-2210 (CAT) do eSocial exige, investigarem a causa raiz com os 5 Porquês apoiados por IA e acompanharem indicadores de segurança.",
-    "Context": "Contexto", "Hackathon, SESMT & Industry 4.0": "Hackathon, SESMT e Indústria 4.0",
+    "Context": "Contexto", "Hackathon winner, SESMT & Industry 4.0": "Campeão de hackathon, SESMT e Indústria 4.0",
     "Claude with structured output, plus a key-free demo mode": "Claude com saída estruturada, mais um modo demonstração sem chave",
     "Quality": "Qualidade", "ruff, mypy --strict and pytest in CI": "ruff, mypy --strict e pytest no CI",
     "Accident reports are slow and error-prone.": "Comunicar acidentes é lento e sujeito a erro.",
